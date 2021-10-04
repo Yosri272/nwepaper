@@ -16,9 +16,9 @@
     <!-- Content Header (Page header) -->
 <div class="row justify-content-center">
     <div class="col-md-12">
-       
 
-            
+
+
 <div class="card">
      <div class="card-header"><strong> اضافه عضو</strong> </div>
                     <div class="card-body">
@@ -30,7 +30,7 @@
 
 
 
- 
+
 
                   <div class="card-body">
                   <form method="GET" action="{{  ('c_register1')  }}">
@@ -58,7 +58,7 @@
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>{{ __('ادخل الاميل صاح') }}</strong>
                                     </span>
                                 @enderror
                             </div>
@@ -83,8 +83,17 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('كلمة السر') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i  class="fa fa-fw fa-eye field-icon toggle-password" id="eye"></i></div>
+                                    <input
+                                      id="password"
+                                      type="password"
+                                      class="form-control @error('password') is-invalid @enderror"
+                                      name="password"
+                                      required autocomplete="new-password"
+                                      data-toggle="password">
 
+                                </div>
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -92,15 +101,9 @@
                                 @enderror
                             </div>
                         </div>
- <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('تكرار كلمة السر') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
 
- 
+
 <br>
 <br>
 <hr>
@@ -113,7 +116,7 @@
                             </div>
                         </div>
 </form>
-   </div>            
+   </div>
 
 </div>
 
@@ -127,14 +130,20 @@
 
 
 
-                    
+
 
                   </div>
 
 
         </div>
- 
+
 <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+
+<!-- jQuery -->
+<script src="javascript/showpassword.js"></script>
 @endsection
+
+</body>
+</html>

@@ -11,11 +11,11 @@
     <!-- Content Header (Page header) -->
 <div class="row justify-content-center">
     <div class="col-md-12">
-       
 
-            
+
+
 <div class="card">
-     <div class="card-header"><strong> اضافه عضو</strong> </div>
+     <div class="card-header"><strong> عرض بيانات عضو</strong> </div>
                     <div class="card-body">
 
 
@@ -25,7 +25,7 @@
 
 
 
- 
+
 
                   <div class="card-body">
                     <form method="GET"  action="{{ url('upm_view')}}/{{ $edit->id  }}">
@@ -78,7 +78,7 @@
 
 
 
- 
+
 <br>
 <br>
 <hr>
@@ -91,7 +91,7 @@
                             </div>
                         </div>
 </form>
-   </div>            
+   </div>
 
 </div>
 
@@ -105,13 +105,13 @@
 
 
 
-                    
+
 
                   </div>
 
 
         </div>
- 
+
 <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->

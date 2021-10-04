@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>سكرتير التحرير</title>
   <!-- from downfile -->
-  <link href="main_files/yosri/ionicons.min.css" rel="stylesheet" type="text/css" />    
+  <link href="main_files/yosri/ionicons.min.css" rel="stylesheet" type="text/css" />
   <link href="main_files/yosri/font-awesome.min.css" rel="stylesheet" type="text/css" />
    <!-- from internet -->
    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -37,10 +37,10 @@
 
   <script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
 
-    <link rel="stylesheet" href="{{ asset('rating/ratingstar.css') }}">    
+    <link rel="stylesheet" href="{{ asset('rating/ratingstar.css') }}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="main_files/yosri/ionicons.min.css" rel="stylesheet" type="text/css" />    
+    <link href="main_files/yosri/ionicons.min.css" rel="stylesheet" type="text/css" />
   <link href="main_files/yosri/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <!-- Font Awesome -->
 <link rel="stylesheet" href="main_files/font-awesome.css">
@@ -64,7 +64,7 @@
 
 <script src="main_files/ckeditor.js"></script><style>.cke{visibility:hidden;}</style>
 
-  <link rel="stylesheet" href="main_files/ratingstar.css">    
+  <link rel="stylesheet" href="main_files/ratingstar.css">
 
 
   <script type="text/javascript">
@@ -81,18 +81,18 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
       </li>
-     
+
     </ul>
 
     <!-- SEARCH FORM -->
-  
 
- 
+
+
     <!-- Right navbar links -->
     <ul class="navbar-nav mr-auto">
       <!-- Messages Dropdown Menu -->
-           <li style="margin-left: 200px;"> <a href="{{ url('e_pssword6') }}">Edit Password </a></li>
- 
+           <li style="margin-left: 200px;"> <a href="{{ url('e_pssword6') }}">تغير كلمة السر </a></li>
+
            <li class="nav-item">
 
 <a href="{{ route('logout') }}"
@@ -114,15 +114,15 @@
 <!-- /.navbar -->
 <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
     <!-- Left navbar links -->
-  
-   
+
+
     <div class="form-control">
     <div class="form-group">
               @include('flash-message')
                @yield('content3')
                </div>
                  </div>
-                 
+
   </nav>
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4" style="min-height: 434px;">
@@ -152,7 +152,7 @@
                          with font-awesome or any other icon font library -->
 
 
-                    
+
                         <li class="nav-item">
                             <a href="{{ url('s_display1') }}" class="nav-link">
                                 <i class="nav-icon fa fa-calendar"></i>
@@ -160,7 +160,7 @@
 
                                     المقالات المجازة
 
-                                  
+
                                 </p>
                             </a>
                         </li>
@@ -170,11 +170,11 @@
                                 <i class="nav-icon fa fa-calendar"></i>
                                 <p>
                                     مقالات تحت التصحيح
-                                   
+
                                 </p>
                             </a>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a href="{{ url('s_display') }}" class="nav-link">
                                 <i class="nav-icon fa fa-calendar"></i>
@@ -185,10 +185,10 @@
                             </a>
                         </li>
 
-                       
-                    
 
-                    
+
+
+
 
                 </ul>
             </nav>
@@ -198,7 +198,7 @@
     </div>
     <!-- /.sidebar -->
 </aside>
-    
+
 
 <!-- jQuery -->
 <script src="main_files/jquery_003.js"></script>
@@ -224,21 +224,21 @@
 // rating
 var rate;
 $('#rating-student').starrr({
-  change: function(e, value){ 
-  	rate = value;  	       
+  change: function(e, value){
+  	rate = value;
     if (value) {
-      $('.your-choice-was').show();      
+      $('.your-choice-was').show();
     } else {
       $('.your-choice-was').hide();
     }
   }
 });
 // ajax submit
-$("#submit").click(function(){	
+$("#submit").click(function(){
 	var name = $('#name').val();
   var id = $('#id').val();
 
-	$.ajax({		
+	$.ajax({
          url:'http://www.ultimate-erp.com/nms/public/getmsg',
          type: 'post',
          data: {v1 : name, v2 : id , v3 : rate,_token:csrf},
@@ -246,7 +246,7 @@ $("#submit").click(function(){
         	if(response.status == 1){
             	$('.msg').html('<b>تم التقييم بنجاح</b>');
         	}else{
-            	$('.msg').html('<b>يوجد خطاء !!</b>');        		
+            	$('.msg').html('<b>يوجد خطاء !!</b>');
         	}
         }
     });
